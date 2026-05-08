@@ -14,7 +14,7 @@ a { color: inherit; }
 /* ============================================================
    Base
    ============================================================ */
-html, body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 body {
   background: var(--bg-cream);
   color: var(--text-body);
@@ -86,14 +86,14 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: transparent;
+  background: rgba(245, 239, 230, 0.85);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
   transition: background var(--dur-mid) var(--ease), border-color var(--dur-mid) var(--ease);
   border-bottom: 1px solid transparent;
 }
 .nav.is-scrolled {
-  background: rgba(245, 239, 230, 0.92);
-  backdrop-filter: saturate(140%) blur(8px);
-  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  background: rgba(245, 239, 230, 0.95);
   border-bottom-color: var(--rule);
 }
 
